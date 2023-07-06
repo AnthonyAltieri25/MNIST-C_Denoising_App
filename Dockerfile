@@ -4,7 +4,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 #Gets code from app folder and requirement 
-COPY app ./app
+COPY app ./
 COPY requirements.txt ./
 
 #Installs dependencies
@@ -18,3 +18,5 @@ HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 #Runs the streamlit run command
 ENTRYPOINT ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+#ENTRYPOINT ["streamlit", "run"]
+#CMD ["main.py"]

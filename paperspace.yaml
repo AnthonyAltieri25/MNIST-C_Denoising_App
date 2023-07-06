@@ -1,0 +1,6 @@
+enabled: true
+image: anthonyaltieri25/streamlit
+port: 8051
+resources:
+  replicas: 1
+  instanceType: C4
